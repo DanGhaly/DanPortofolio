@@ -1,0 +1,130 @@
+.header {
+    width: 100%;
+    height: 100%;
+    background-color: #212121;
+    background-size: cover;
+    background-position: center;
+    padding-top: 6.25rem;
+}
+
+.navbar-collapse ul li a {
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #404040;
+}
+
+.navbar-collapse ul li a::after {
+    content: '';
+    width: 0;
+    height: 0.1875rem;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -0.375rem;
+    transition: 0.5s;
+}
+
+.navbar-collapse ul li a:hover::after {
+    width: 100%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f2e8df;
+    transition: all 0.3s ease;
+    padding: 1.25rem 0;
+}
+
+.navbar.scrolled {
+    padding: 0.625rem 0;
+    height: 2.2rem ;
+    background-color: rgb(255, 255, 255);
+}
+
+.logo {
+    transition: all 0.3s ease-in-out;
+    width: 9.375rem;
+}
+
+.navbar.scrolled .logo {
+    width: 3.125rem;
+}
+
+.HeaderTxt {
+    font-size: 1.875rem;
+    color: #f2e8df;
+}
+
+.HeaderTxt h1 {
+    font-size: 3.75rem;
+    padding-left: 3.75rem;
+    color: #f2e8df;
+
+}
+
+.HeaderTxt p {
+    font-size: 1.875rem;
+    padding-left: 3.75rem;
+    color: #f2e8df;
+
+}
+
+.HeaderTxt span {
+    font-size: 3.75rem;
+    padding-left: 3.75rem;
+    color: #ff004f;
+}
+
+.img-circle {
+    border-spacing: 1.25rem;
+    border: #878484 solid 0.3125rem;
+    background: linear-gradient(rgba(69, 66, 66, 0.6), #ff004f); /* Gradient overlay */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+    .HeaderTxt h1, .HeaderTxt span {
+        font-size: 2.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .HeaderTxt p {
+        font-size: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .img-circle {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .HeaderTxt h1, .HeaderTxt span {
+        font-size: 2rem;
+        padding-left: 1rem;
+    }
+
+    .HeaderTxt p {
+        font-size: 1.25rem;
+        padding-left: 1rem;
+    }
+
+    .navbar-collapse ul li a {
+        font-size: 1rem;
+    }
+
+    .logo {
+        width: 7rem;
+    }
+
+    .navbar.scrolled .logo {
+        width: 2.5rem;
+    }
+}

@@ -1,0 +1,54 @@
+<div class="container-fluid bg-dark text-white py-5" id="contact">
+    <div class="container-fluid px-2">
+      <div class="row justify-content-center align-items-center gx-0 mx-0">
+        <!-- Left Section (Contact Info) -->
+        <div class="col-12 col-md-5 text-center text-md-start mb-4 mb-md-0">
+          <h2 class="contact-title">Contact Me</h2>
+          <p class="contact-info"><i class="fas fa-envelope me-2"></i>ehabdaniel&#64;gmail.com</p>
+          <p class="contact-info"><i class="fas fa-phone me-2"></i>+201063333690</p>
+          <div class="social-icons mt-4">
+            <a href="https://www.facebook.com/DanGhaly4" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/daanghaly/" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/201063333690" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/ehab-daniel-a10b40116/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <!-- Right Section (Contact Form) -->
+        <div class="col-12 col-md-6 col-sm-6">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <!-- Name Field -->
+            <div class="mb-3">
+              <input type="text" name="Name" class="form-control" formControlName="name" placeholder="Your Name">
+              <div *ngIf="f['name'].touched && f['name'].errors" class="text-danger mt-2">
+                <div *ngIf="f['name'].errors['required']">Name is required.</div>
+                <div *ngIf="f['name'].errors['minlength']">Name must be at least 3 characters.</div>
+              </div>
+            </div>
+  
+            <!-- Email Field -->
+            <div class="mb-3">
+              <input type="email" name="Email" class="form-control" formControlName="email" placeholder="Your Email">
+              <div *ngIf="f['email'].touched && f['email'].errors" class="text-danger mt-2">
+                <div *ngIf="f['email'].errors['required']">Email is required.</div>
+                <div *ngIf="f['email'].errors['email']">Please enter a valid email address.</div>
+              </div>
+            </div>
+  
+            <!-- Message Field -->
+            <div class="mb-3">
+              <textarea class="form-control" name="Message" formControlName="message" rows="6" placeholder="Your Message"></textarea>
+              <div *ngIf="f['message'].touched && f['message'].errors" class="text-danger mt-2">
+                <div *ngIf="f['message'].errors['required']">Message is required.</div>
+                <div *ngIf="f['message'].errors['minlength']">Message must be at least 10 characters.</div>
+              </div>
+            </div>
+  
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-danger">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,37 @@
+<div class="header">
+    <nav class="navbar navbar-expand-lg" style="background-color: #ffffff" [ngClass]="{ 'scrolled': isScrolled }" id="navbar">
+        <div class="container-fluid">
+            <img 
+                [src]="isScrolled ? '../assets/images/Dan\'s.png' : '../assets/images/Dan\'s Light .png'" 
+                id="logo" 
+                class="logo ps-5" 
+                alt="Logo"
+            >
+            <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-5 p-4">
+                    <li class="nav-item pe-5"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item pe-5"><a class="nav-link active" href="#about">About</a></li>
+                    <li class="nav-item pe-5"><a class="nav-link active" href="#services">Services</a></li>
+                    <li class="nav-item pe-5"><a class="nav-link active" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item pe-5"><a class="nav-link active" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="d-flex flex-column flex-lg-row align-items-center p-5">
+            <div class="col-lg-6 text-lg-start text-center HeaderTxt">
+                <p>Front-end web developer</p>
+                <h1 class="fw-bold display-6">Hi, I'm <span>Dan</span><br>A fresh front-end developer, coding my way up!</h1>
+                <!-- <a href="#" class="btn btn-primary mt-3">Learn More</a> -->
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="../assets/images/Adobe Express - file.png" class="img-fluid img-circle w-75 h-75 mt-4" alt="HeaderImgDan">
+            </div>
+        </div>
+    </div>
+</div>

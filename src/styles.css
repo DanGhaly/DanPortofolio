@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:content-box;
+}
+
+body{
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Source Code Pro", serif;
+}
+
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+
+

@@ -1,0 +1,122 @@
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Ensure the container stays within screen width */
+.container-fluid {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Ensure no element overflows */
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* Service Title */
+.service-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #f2e8df;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Card Styling */
+.card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 0;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    height: 100%;
+    max-width: 260px; /* Make the cards smaller */
+    margin: auto; /* Center cards */
+}
+
+/* Card Text */
+.card h2, .card p {
+    color: #f2e8df !important;
+    transition: color 0.4s ease-in-out;
+}
+
+/* Hover Effects */
+.card:hover {
+    background: #f2e8df;
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(255, 0, 79, 0.3);
+}
+
+.card:hover h2, .card:hover p {
+    color: #212121 !important;
+}
+
+/* Button Styling */
+.card a {
+    background-color: #ff004f;
+    color: #f2e8df;
+    border: none;
+    padding: 8px 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-size: 0.85rem;
+}
+
+.card a:hover {
+    background-color: #c3003f;
+    transform: scale(1.05);
+}
+
+/* Responsive Improvements */
+@media (max-width: 992px) {
+    .card {
+        padding: 1.5rem;
+        max-width: 230px; /* Adjust width for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-title {
+        font-size: 2rem;
+    }
+    
+    .card {
+        padding: 1rem;
+        font-size: 0.9rem;
+        height: auto;
+        max-width: 220px; /* Reduce width for smaller screens */
+    }
+
+    .card i {
+        font-size: 2rem;
+    }
+}
+
+/* Fix small screens horizontal scrolling issue */
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+
+    }
+
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .card {
+        max-width: 250px; /* Further reduce width */
+    }
+}
+
+/* Add space between cards */
+.row > div {
+    margin-bottom: 30px;
+    margin-top: 60px;
+}

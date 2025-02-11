@@ -1,0 +1,131 @@
+/* General Styles */
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #f2e8df;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #f2e8df;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff004f; /* Hover effect */
+}
+
+.container-fluid {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Form Styling */
+.form-control {
+    background: #212121;
+    border: 2px solid #ff004f;
+    color: #f2e8df;
+    padding: 12px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100%; /* Ensures it does not overflow */
+    box-sizing: border-box; /* Keeps width within container */
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+.form-control:focus {
+    background: #212121;
+    border-color: #ff004f;
+    color: #f2e8df;
+    outline: none;
+}
+
+/* Button */
+.btn-danger {
+    background: #ff004f;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 0px;
+    width: 100%;
+}
+
+.btn-danger:hover {
+    background: #f2e8df;
+    color: #212121;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .social-icons a {
+        font-size: 1.25rem;
+        margin-right: 10px;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .btn-danger {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 1.75rem;
+    }
+
+    .social-icons a {
+        font-size: 1.1rem;
+        margin-right: 8px;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .btn-danger {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    .contact-title {
+        font-size: 1.5rem;
+    }
+
+    .social-icons a {
+        font-size: 1rem;
+        margin-right: 6px;
+    }
+
+    .form-control {
+        font-size: 0.875rem;
+        padding: 6px;
+        width: 94.5%;
+    }
+
+    .btn-danger {
+        font-size: 0.9rem;
+        padding: 10px;
+        width: 91%;
+
+    }
+}
